@@ -1,0 +1,17 @@
+Sitio Responsive:
+mobile < 536px 
+
+vistas intermedias no importan
+
+desktop > 992px
+
+Todo el estilo en SASS
+debemos usar MIXINS, VARIABLES, EXTENDS y MAPS
+
+Buen SEO 
+(meta tags(description y keywords), favicon, alts y etiquetas semánticas, etc)
+
+si usamos Bootstrap, tiene que modificarse su contenido y hacerlo propio
+(colores y tipografia)
+
+subido a un REPOSITORIO GITHUB y a GITHUB PAGES

@@ -1,0 +1,74 @@
+//RESETS
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+//VARIABLES
+
+
+//MAPS
+$paletaColores:(
+    //GENERAL
+    bg-body: rgb(42,47,88),
+    bg-header: rgb(50, 56, 107),
+    color__a--links: whitesmoke,
+    texto: white,
+    subrayadoAfter: #e91e63,
+    bg-containers: linear-gradient(to bottom, rgb(42, 47, 88) 70%, rgb(50, 56, 107) 100%),
+
+    //INDEX
+    bg-texto--Index:  rgb(80, 153, 255),
+    mayuscula--index: red,
+    texto--index: rgb(238, 228, 228),
+    
+    //CONTACTO
+    
+);
+
+$fontSizes:(
+    titulos: 2em,
+    titulo--contacto: 3.5em
+
+);
+
+//EXTENDS
+
+.after{
+    content: "";
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.input{
+    color: black;
+    padding: 1.2em;
+    border-radius: 0.5em;
+    border: none;
+    margin: 1em 0;
+    width: 75ch;
+}
+
+.boton{
+    background-color: rgb(80, 153, 255); 
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
