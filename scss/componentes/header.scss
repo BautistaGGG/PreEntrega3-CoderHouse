@@ -5,101 +5,115 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-    
-    ul{
-        display: none;
-    }
-    
-    .nav__a--img{
-        height: 100px;
-        cursor: pointer;
-        padding: .5em 0;
-        transition: all 0.5s ease-out;
-    }
-    
-    .nav__a--img:hover{
-        transition: all 0.5s ease-out;
-        transform: scale(.9);
-        filter: opacity(.8);
-        filter: contrast(100);
-    }
-    
-    .nav__a--links,
-    .active{
-        display: inline-block;
-        font-size: 1.2em;
-        text-decoration: none;
-        color: whitesmoke;
-        position: relative;
-    }
-    
-    .active{
-        text-decoration: none;
-        font-size: 1.2em;
-        scale: .9;
-        opacity: .5;
-    }
-    
-    .nav__a--links::after{
-        position: absolute;
-        content: "";
-        left:0;
-        bottom: 0;
-        height: 1px;
-        width: 100%;
-        background: red;
         
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 0.3s ease-in;
-    }
+        .nav__a--img{
+            height: 100px;
+            cursor: pointer;
+            padding: .5em 0;
+            transition: all 0.5s ease-out;
+        }
+        
+        .nav__a--img:hover{
+            transition: all 0.5s ease-out;
+            transform: scale(.9);
+            filter: opacity(.8);
+            filter: contrast(100);
+        }
+        
+        .nav__a--links,
+        .active{
+            display: inline-block;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: whitesmoke;
+            position: relative;
+        }
+        
+        .active{
+            text-decoration: none;
+            font-size: 1.2em;
+            scale: .9;
+            opacity: .5;
+        }
+        
+        .nav__a--links::after{
+            position: absolute;
+            content: "";
+            left:0;
+            bottom: 0;
+            height: 1px;
+            width: 100%;
+            background: red;
+            
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease-in;
+        }
     
-    .nav__a--links:hover::after{
-        transform: scaleX(1);
-        transform-origin: left;
-    }
-    
-    .nav__a--links:hover,
-    .active:hover{
-        color: whitesmoke;
-    }
-
-    ul{
-        padding: 0;
-        display: none;
-    }
-    
-    li{
-        list-style: none;
-        display: inline;
-        padding: 0px 5px;
-    }
-    
-    li:last-child{
-        padding: 0;
-    }   
-}
-
-@media (min-width: 576px) {
-
-    /*HEADER*/
-    header{
-
-        nav{
-            padding: 0 1.5em;
+        .nav__a--links:hover::after{
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        
+        .nav__a--links:hover,
+        .active:hover{
+            color: whitesmoke;
         }
         
         ul{
-            display: block;
-        }
-    }
-        
-        /*checkear si bi-list forma parte de bootstrap nativo, SI LO ES, 
-        borrar y crear una clase propia que cumpla la misma función,
-        ya que es mala práctica modificarla directamente, SI NO, 
-        dejar y no cambiar nada*/
-        .bi-list{
+            padding: 0;
             display: none;
         }
+
+        li{
+            list-style: none;
+            display: inline;
+            padding: 0px 5px;
+        }
+
+        li:last-child{
+            padding: 0;
+        }  
+    }
+}
+
+@media (min-width: 576px) {
+    header{
+        nav{
+            padding: 0 1.5em;
+            
+            ul{
+                display: block;
+            }
+        }
+        .bi-list__personal{
+            display: none;
+        }
+    }
+}
+/*MODIFICACIONES A ELEMENTOS DE BOOTSTRAP*/
+.offcanvas--personal{
+    background-color: rgb(50, 56, 107);
+    height: 100vh !important
+}
+
+.btn-close__personal{
+    filter: invert(1);
+    opacity: 1;
+    padding-top: 1em !important;
+    transform: scale(1.5);
+}
+
+.offcanvas-body__personal{
+    display: grid;
+    place-items: center;
+    gap: .5em;
+}
+
+.offcanvas--links{
+    display: inline-block;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: whitesmoke;
+    position: relative;
 }

@@ -1,22 +1,6 @@
-@charset "UTF-8";
-body {
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-* {
-  font-family: "Montserrat", sans-serif;
-}
-
-.after {
+.after, .section--rivalidades__article-title::after {
   content: "";
-  position: relative;
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -32,7 +16,7 @@ img {
   width: 75ch;
 }
 
-.boton {
+.boton, .rivalidades_a--link {
   background-color: rgb(80, 153, 255);
   color: white;
   font-weight: bold;
@@ -40,6 +24,21 @@ img {
   outline: none;
   border: none;
   cursor: pointer;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
 }
 
 header {
@@ -50,36 +49,33 @@ header nav {
   justify-content: space-between;
   align-items: center;
 }
-header ul {
-  display: none;
-}
-header .nav__a--img {
+header nav .nav__a--img {
   height: 100px;
   cursor: pointer;
   padding: 0.5em 0;
   transition: all 0.5s ease-out;
 }
-header .nav__a--img:hover {
+header nav .nav__a--img:hover {
   transition: all 0.5s ease-out;
   transform: scale(0.9);
   filter: opacity(0.8);
   filter: contrast(100);
 }
-header .nav__a--links,
-header .active {
+header nav .nav__a--links,
+header nav .active {
   display: inline-block;
   font-size: 1.2em;
   text-decoration: none;
   color: whitesmoke;
   position: relative;
 }
-header .active {
+header nav .active {
   text-decoration: none;
   font-size: 1.2em;
   scale: 0.9;
   opacity: 0.5;
 }
-header .nav__a--links::after {
+header nav .nav__a--links::after {
   position: absolute;
   content: "";
   left: 0;
@@ -91,43 +87,109 @@ header .nav__a--links::after {
   transform-origin: right;
   transition: transform 0.3s ease-in;
 }
-header .nav__a--links:hover::after {
+header nav .nav__a--links:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
-header .nav__a--links:hover,
-header .active:hover {
+header nav .nav__a--links:hover,
+header nav .active:hover {
   color: whitesmoke;
 }
-header ul {
+header nav ul {
   padding: 0;
   display: none;
 }
-header li {
+header nav li {
   list-style: none;
   display: inline;
   padding: 0px 5px;
 }
-header li:last-child {
+header nav li:last-child {
   padding: 0;
 }
 
 @media (min-width: 576px) {
-  /*HEADER*/
   header nav {
     padding: 0 1.5em;
   }
-  header ul {
+  header nav ul {
     display: block;
   }
-  /*checkear si bi-list forma parte de bootstrap nativo, SI LO ES, 
-  borrar y crear una clase propia que cumpla la misma función,
-  ya que es mala práctica modificarla directamente, SI NO, 
-  dejar y no cambiar nada*/
-  .bi-list {
+  header .bi-list__personal {
     display: none;
   }
 }
+/*MODIFICACIONES A ELEMENTOS DE BOOTSTRAP*/
+.offcanvas--personal {
+  background-color: rgb(50, 56, 107);
+  height: 100vh !important;
+}
+
+.btn-close__personal {
+  filter: invert(1);
+  opacity: 1;
+  padding-top: 1em !important;
+  transform: scale(1.5);
+}
+
+.offcanvas-body__personal {
+  display: grid;
+  place-items: center;
+  gap: 0.5em;
+}
+
+.offcanvas--links {
+  display: inline-block;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: whitesmoke;
+  position: relative;
+}
+
+/*HOME*/
+.section__article--text {
+  color: rgb(238, 228, 228);
+}
+.section__article--text span {
+  color: red;
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+/*ABOUT*/
+/*PALMARES*/
+/*RIVALIDADES*/
+.section--rivalidades__article-title {
+  position: relative;
+  display: inline-block;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 1em 0;
+  z-index: 0;
+}
+.section--rivalidades__article-title::after {
+  background-color: #e91e63;
+  height: 5px;
+  margin-bottom: 2px;
+}
+
+.section--rivalidades__p {
+  max-width: 75ch;
+  line-height: 1.8;
+  margin: 1em 0;
+}
+
+.rivalidades_a--link {
+  display: inline-block;
+  padding: 0.8em;
+  width: 100%;
+  margin: 2em auto;
+  font-weight: bold;
+  border-radius: 2em;
+  text-align: center;
+}
+
+/*CONTACTO*/
 footer {
   display: flex;
   justify-content: space-between;
@@ -138,7 +200,6 @@ footer {
 }
 footer p {
   margin: 0;
-  color: white;
 }
 footer img {
   height: 25px;
@@ -151,5 +212,16 @@ footer .footer__a--links {
 footer .footer--midIcon {
   margin: 0 10px;
 }
+
+body {
+  background-color: rgb(42, 47, 88);
+  color: white;
+}
+
+/*
+    agregar a section__rivalidades-wrapper
+    display: flex
+    gap: 4em
+*/
 
 /*# sourceMappingURL=style.css.map */

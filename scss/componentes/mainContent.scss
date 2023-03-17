@@ -1,0 +1,53 @@
+/*HOME*/
+    .section__article--text{
+        color: map-get($paletaColores, texto--index);
+
+        span{
+            color: map-get($paletaColores, mayuscula--index);
+            font-weight: bold;
+            font-size: map-get($fontSizes, mayuscula--index);
+        }
+    }
+
+/*ABOUT*/
+
+
+/*PALMARES*/
+
+
+/*RIVALIDADES*/
+
+.section--rivalidades__article-title{
+    position: relative;
+    display: inline-block;
+    font-size: map-get($fontSizes, titulos);
+    font-weight: 700;
+    margin: 1em 0;
+    z-index: 0;
+
+    &::after{
+        @extend .after;
+        background-color:map-get($paletaColores,subrayadoAfter);
+        height: 5px;
+        margin-bottom: 2px;
+    }
+}
+
+.section--rivalidades__p{
+    max-width: 75ch;
+    line-height: 1.8;
+    margin: 1em 0;
+}
+
+.rivalidades_a--link{
+    @extend .boton;
+    display: inline-block;
+    padding: .8em;
+    width: 100%;
+    margin: 2em auto;
+    font-weight: bold;
+    border-radius: 2em;
+    text-align: center;
+}
+
+/*CONTACTO*/
