@@ -15,26 +15,33 @@ $paletaColores:(
     bg-texto--index:  rgb(80, 153, 255),
     mayuscula--index: red,
     texto--index: rgb(238, 228, 228),
+);
     
-    //CONTACTO
+$fontSizes:(
+    font_a--links: 1.2em,
+    mayuscula--index: 1.7em,
+    titulos: 2em,
+    titulo--contacto: 3em,
+    parrafos: 1.125em,
+    parrafo--contacto: 1.5em,
+    font_button: 1.25em,
+    offcanvas--links: 1.2em
+);
     
-    );
-    
-    $fontSizes:(
-        font_a--links: 1.2em,
-        mayuscula--index: 1.7em,
-        titulos: 2em,
-        titulo--contacto: 3em,
-        parrafos: 1em,
-        parrafo--contacto: 1.5em,
-        font_button: 1.25em,
-        offcanvas--links: 1.2em
-    );
-    
-    //EXTENDS
+//EXTENDS
+
+    .titulos{
+        display: inline-block;
+        position: relative;
+        font-size: map-get($fontSizes, titulos);
+        font-weight: 700;
+        margin: 1em 0;
+        z-index: 0; 
+    }
     
     .after{
         content: "";
+        background-color:map-get($paletaColores,subrayadoAfter);
         position: absolute;
         left: 0;
         bottom: 0;
@@ -44,15 +51,19 @@ $paletaColores:(
     
     .input{
         color: black;
-        padding: 1.2em;
         border-radius: 0.5em;
         border: none;
         margin: 1em 0;
         width: 75ch;
     }
+
+    .inputFocus{
+        outline: 2px solid map-get($paletaColores,bg-texto--index);
+        background-color: rgb(231, 229, 229);
+    }
     
     .boton{
-        background-color: rgb(80, 153, 255); 
+        background-color: map-get($paletaColores,bg-texto--index); 
         color: white;
         font-weight: bold;
         text-decoration: none;
@@ -61,7 +72,7 @@ $paletaColores:(
         cursor: pointer;
     }
 
-    //MIXINS
+//MIXINS
     
     
 //RESETS

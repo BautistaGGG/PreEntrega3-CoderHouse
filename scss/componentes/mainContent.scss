@@ -10,24 +10,73 @@
     }
 
 /*ABOUT*/
+    .section--about__article--container{
+        background-color: map-get($paletaColores,bg-containers);
+        
+        .section--about__article-title{
+            @extend .titulos;
+
+            &::after{
+                @extend .after;
+                height: 5px;
+                margin-bottom: 5px;
+            }
+        }
+        .section__about--p{
+            font-size: 17px
+        }
+
+        .section--about__aside{
+            display: flex;
+            justify-content: space-between;
+            img{
+                height: 100px;
+            }
+        }
+    }
+
+    .section__about--iframes{
+        h2{
+            text-align: center;
+            font-size: map-get($fontSizes, titulos);
+            font-weight: bold;
+            margin: 2em 0 1em;
+        }
+
+        iframe{
+            width: 100%
+        }
+    }
 
 
 /*PALMARES*/
+    .palmares__main__section{
+        .palmares__main--title{
+            @extend .titulos;
+            
+            &::after{
+                @extend .after;
+                height: 5px;
+                margin-bottom: 5px;
+            }
+        }
 
+        .palmares__main--p{
+            font-size: map-get($fontSizes, parrafosMobile)
+        }
+
+        .palmares__img{
+            border-radius: 5px
+        }
+    }
 
 /*RIVALIDADES*/
 
 .section--rivalidades__article-title{
-    position: relative;
-    display: inline-block;
-    font-size: map-get($fontSizes, titulos);
-    font-weight: 700;
-    margin: 1em 0;
-    z-index: 0;
+    @extend .titulos;
 
     &::after{
         @extend .after;
-        background-color:map-get($paletaColores,subrayadoAfter);
         height: 5px;
         margin-bottom: 2px;
     }
@@ -37,6 +86,7 @@
     max-width: 75ch;
     line-height: 1.8;
     margin: 1em 0;
+    font-size: map-get($fontSizes, parrafosMobile)
 }
 
 .rivalidades_a--link{
@@ -51,3 +101,57 @@
 }
 
 /*CONTACTO*/
+
+.contacto__main--left{
+    h1{
+        @extend .titulos;
+        text-align: center;
+        text-shadow: 1px 1px 2px black;
+    }
+}
+
+.contacto__main--right{
+    
+    p{
+        font-size: map-get($fontSizes, parrafosMobile);
+        margin-bottom: 2em;
+    }
+
+    span{
+        position: relative;
+        font-weight: bold;
+
+        &::after{
+            @extend .after;
+            height: 8px;
+        }
+    }
+}
+
+form{
+    display: grid;
+
+    input{
+        @extend .input;
+        width: auto;
+        padding: .8em 1.2em;
+    }
+
+    textarea{
+        height: 6em;
+        border-radius: 0.5em;
+        padding: .5em 1.2em;
+    }
+
+    input:focus, 
+    textarea:focus{
+        @extend .inputFocus
+    }
+
+    button{
+        @extend .boton;
+        padding: 1em 3em;
+        margin-top: 2em;
+        border-radius: 0.5em;
+    }
+}
