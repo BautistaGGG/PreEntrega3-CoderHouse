@@ -22,7 +22,7 @@ $fontSizes:(
     mayuscula--index: 1.7em,
     titulos: 2em,
     titulo--contacto: 3em,
-    parrafos: 1.125em,
+    parrafosMobile: 1.125em,
     parrafo--contacto: 1.5em,
     font_button: 1.25em,
     offcanvas--links: 1.2em
@@ -51,7 +51,7 @@ $fontSizes:(
     
     .input{
         color: black;
-        border-radius: 0.5em;
+        border-radius: 5px;
         border: none;
         margin: 1em 0;
         width: 75ch;

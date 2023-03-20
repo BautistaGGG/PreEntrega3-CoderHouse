@@ -1,6 +1,6 @@
 header{
     background-color: rgb(50, 56, 107);
-    
+
     nav{
         display: flex;
         justify-content: space-between;
@@ -74,6 +74,19 @@ header{
         li:last-child{
             padding: 0;
         }  
+
+        .bi-list__personal{
+            cursor: pointer;
+        }
+
+        .offcanvas-body__personal{
+            .offcanvas--links:hover{
+                color: red;
+            }
+            .active:hover{
+                color: white;
+            }
+        }
     }
 }
 
@@ -86,7 +99,7 @@ header{
                 display: block;
             }
         }
-        .bi-list__personal{
+        .bi-list__personal,.offcanvas--personal{
             display: none;
         }
     }
@@ -100,7 +113,7 @@ header{
 .btn-close__personal{
     filter: invert(1);
     opacity: 1;
-    padding-top: 1em !important;
+    padding-top: 1.5em !important;
     transform: scale(1.5);
 }
 

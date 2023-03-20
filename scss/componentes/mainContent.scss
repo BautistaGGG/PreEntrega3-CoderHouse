@@ -1,3 +1,8 @@
+/*GENERAL*/
+main{
+    margin-top: 6.3em;
+}
+
 /*HOME*/
     .section__article--text{
         color: map-get($paletaColores, texto--index);
@@ -19,7 +24,9 @@
             &::after{
                 @extend .after;
                 height: 5px;
+                border-radius: 2px;
                 margin-bottom: 5px;
+                gap: 2em;
             }
         }
         .section__about--p{
@@ -27,10 +34,14 @@
         }
 
         .section--about__aside{
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            place-items: center;
+            
             img{
-                height: 100px;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
             }
         }
     }
@@ -58,6 +69,7 @@
                 @extend .after;
                 height: 5px;
                 margin-bottom: 5px;
+                border-radius: 2px;
             }
         }
 
@@ -79,6 +91,7 @@
         @extend .after;
         height: 5px;
         margin-bottom: 2px;
+        border-radius: 2px;
     }
 }
 
@@ -96,7 +109,7 @@
     width: 100%;
     margin: 2em auto;
     font-weight: bold;
-    border-radius: 2em;
+    border-radius: 5px;
     text-align: center;
 }
 
@@ -139,7 +152,7 @@ form{
 
     textarea{
         height: 6em;
-        border-radius: 0.5em;
+        border-radius: 5px;
         padding: .5em 1.2em;
     }
 

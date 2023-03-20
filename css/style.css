@@ -19,7 +19,7 @@
 
 .input, form input {
   color: black;
-  border-radius: 0.5em;
+  border-radius: 5px;
   border: none;
   margin: 1em 0;
   width: 75ch;
@@ -122,6 +122,15 @@ header nav li {
 header nav li:last-child {
   padding: 0;
 }
+header nav .bi-list__personal {
+  cursor: pointer;
+}
+header nav .offcanvas-body__personal .offcanvas--links:hover {
+  color: red;
+}
+header nav .offcanvas-body__personal .active:hover {
+  color: white;
+}
 
 @media (min-width: 576px) {
   header nav {
@@ -130,7 +139,7 @@ header nav li:last-child {
   header nav ul {
     display: block;
   }
-  header .bi-list__personal {
+  header .bi-list__personal, header .offcanvas--personal {
     display: none;
   }
 }
@@ -143,7 +152,7 @@ header nav li:last-child {
 .btn-close__personal {
   filter: invert(1);
   opacity: 1;
-  padding-top: 1em !important;
+  padding-top: 1.5em !important;
   transform: scale(1.5);
 }
 
@@ -159,6 +168,11 @@ header nav li:last-child {
   text-decoration: none;
   color: whitesmoke;
   position: relative;
+}
+
+/*GENERAL*/
+main {
+  margin-top: 6.3em;
 }
 
 /*HOME*/
@@ -177,17 +191,22 @@ header nav li:last-child {
 }
 .section--about__article--container .section--about__article-title::after {
   height: 5px;
+  border-radius: 2px;
   margin-bottom: 5px;
+  gap: 2em;
 }
 .section--about__article--container .section__about--p {
   font-size: 17px;
 }
 .section--about__article--container .section--about__aside {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
 }
 .section--about__article--container .section--about__aside img {
-  height: 100px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .section__about--iframes h2 {
@@ -204,6 +223,10 @@ header nav li:last-child {
 .palmares__main__section .palmares__main--title::after {
   height: 5px;
   margin-bottom: 5px;
+  border-radius: 2px;
+}
+.palmares__main__section .palmares__main--p {
+  font-size: 1.125em;
 }
 .palmares__main__section .palmares__img {
   border-radius: 5px;
@@ -213,12 +236,14 @@ header nav li:last-child {
 .section--rivalidades__article-title::after {
   height: 5px;
   margin-bottom: 2px;
+  border-radius: 2px;
 }
 
 .section--rivalidades__p {
   max-width: 75ch;
   line-height: 1.8;
   margin: 1em 0;
+  font-size: 1.125em;
 }
 
 .rivalidades_a--link {
@@ -227,7 +252,7 @@ header nav li:last-child {
   width: 100%;
   margin: 2em auto;
   font-weight: bold;
-  border-radius: 2em;
+  border-radius: 5px;
   text-align: center;
 }
 
@@ -238,6 +263,7 @@ header nav li:last-child {
 }
 
 .contacto__main--right p {
+  font-size: 1.125em;
   margin-bottom: 2em;
 }
 .contacto__main--right span {
@@ -257,7 +283,7 @@ form input {
 }
 form textarea {
   height: 6em;
-  border-radius: 0.5em;
+  border-radius: 5px;
   padding: 0.5em 1.2em;
 }
 form button {
