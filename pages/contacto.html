@@ -15,41 +15,41 @@
 <body>
     <header class="container-fluid fixed-top">
         <nav class="nav">
-            <a href="../index.html">
-                <img src="../assets/logo.png" alt="DjokovicLogo" class="nav__a--img">
+            <a href="../index.html" role="link">
+                <img src="../assets/logo.png" alt="DjokovicLogo" class="nav__a--img" role="banner">
             </a>
             <ul>
                 <li class="nav__li">
-                    <a href="../index.html" class="nav__a--links">
+                    <a href="../index.html" class="nav__a--links" role="link">
                         Home
                     </a>
                 </li>
 
                 <li class="nav__li">
-                    <a href="./about.html" class="nav__a--links">
+                    <a href="./about.html" class="nav__a--links" role="link">
                         About
                     </a>
                 </li>
 
                 <li class="nav__li">
-                    <a href="./palmares.html" class="nav__a--links">
+                    <a href="./palmares.html" class="nav__a--links" role="link">
                         Palmarés
                     </a>
                 </li>
 
                 <li class="nav__li">
-                    <a href="./rivalidades.html" class="nav__a--links">
+                    <a href="./rivalidades.html" class="nav__a--links" role="link">
                         Rivalidades
                     </a>
                 </li>
                 
                 <li class="nav__li">
-                    <a href="#" class="active">
+                    <a href="#" class="active" role="link">
                         Contacto
                     </a>
                 </li>
             </ul>
-            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-list bi-list__personal" viewBox="0 0 16 16" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-list bi-list__personal" role="button" viewBox="0 0 16 16" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
             </svg>
             <div class="offcanvas offcanvas-top offcanvas--personal" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
@@ -58,31 +58,31 @@
                 </div>
                 <div class="offcanvas-body offcanvas-body__personal">
                     <li class="nav__li">
-                        <a href="/index.html" class="offcanvas--links">
+                        <a href="/index.html" class="offcanvas--links" role="link">
                             Home
                         </a>
                     </li>
 
                     <li class="nav__li">
-                        <a href="./about.html" class="offcanvas--links">
+                        <a href="./about.html" class="offcanvas--links" role="link">
                             About
                         </a>
                     </li>
 
                     <li class="nav__li">
-                        <a href="./palmares.html" class="offcanvas--links">
+                        <a href="./palmares.html" class="offcanvas--links" role="link">
                             Palmarés
                         </a>
                     </li>
 
                     <li class="nav__li">
-                        <a href="./rivalidades.html" class="offcanvas--links">
+                        <a href="./rivalidades.html" class="offcanvas--links" role="link">
                             Rivalidades
                         </a>
                     </li>
                     
                     <li class="nav__li">
-                        <a href="./contacto.html" class="offcanvas--links active">
+                        <a href="./contacto.html" class="offcanvas--links active" role="link">
                             Contacto
                         </a>
                     </li>
@@ -96,7 +96,7 @@
             <h1>¿Querés contarme tu experiencia en el sitio web?</h1>
         </section>
         <section class="contacto__main--right mx-4">
-            <p>
+            <p role="text">
                 Siempre es positivo tener alguna clase de 
                 <span>feedback</span> 
                 con mis lectores, asi que me interesaría conocer tu opinión respecto del producto. 
@@ -111,8 +111,8 @@
                 <input type="email" id="email" required>
                 
                 <label for="feedback">Feedback</label>
-                <textarea id="feedback" class="contacto__main--feedback"></textarea>
-                <button>
+                <textarea id="feedback" class="contacto__main--feedback" required></textarea>
+                <button role="button">
                     Enviar
                 </button>
             </form>
@@ -122,13 +122,13 @@
     <footer>
         <p>Sitio web hecho por Bautista González Gastó</p>
         <div class="footer-icons">
-            <a href="https://twitter.com/DjokerNole" target="_blank" class="footer__a--links">
+            <a href="https://twitter.com/DjokerNole" target="_blank" class="footer__a--links" role="link">
                 <img src="../assets/twitter.png" alt="redes sociales: twitter">
             </a>
-            <a href="https://www.instagram.com/djokernole/" target="_blank" class="footer__a--links footer--midIcon">
+            <a href="https://www.instagram.com/djokernole/" target="_blank" class="footer__a--links footer--midIcon" role="link">
                 <img src="../assets/instagram.png" alt="redes sociales: instagram">
             </a>
-            <a href="https://www.facebook.com/djokovicofficial" target="_blank" class="footer__a--links">
+            <a href="https://www.facebook.com/djokovicofficial" target="_blank" class="footer__a--links" role="link">
                 <img src="../assets/facebook.png" alt="redes sociales: facebook">
             </a>
         </div>
