@@ -92,6 +92,8 @@ header{
 
 @media (min-width: 576px) {
     header{
+        position: initial !important;
+        
         nav{
             padding: 0 1.5em;
             

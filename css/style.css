@@ -133,6 +133,9 @@ header nav .offcanvas-body__personal .active:hover {
 }
 
 @media (min-width: 576px) {
+  header {
+    position: initial !important;
+  }
   header nav {
     padding: 0 1.5em;
   }
@@ -294,6 +297,9 @@ form button {
 
 /* ESTILOS DESKTOP*/
 @media (min-width: 576px) {
+  main {
+    margin-top: 0;
+  }
   /*HOME*/
   .section__article--text {
     background-color: rgb(80, 153, 255);
@@ -316,7 +322,6 @@ form button {
   /*ABOUT*/
   .section--about {
     display: grid;
-    margin-top: 20px;
   }
   .section--about .section--about__article--container {
     background: linear-gradient(to bottom, rgb(42, 47, 88) 70%, rgb(50, 56, 107) 100%);
@@ -333,15 +338,8 @@ form button {
     color: white;
   }
   .section--about .section--about__article-title::after {
-    position: absolute;
-    background-color: #e91e63;
-    content: "";
     height: 5px;
-    width: 100%;
-    bottom: 0;
-    left: 0;
     margin-bottom: 5px;
-    z-index: -1;
   }
   .section--about .section__about-wrapper {
     display: flex;
@@ -382,8 +380,201 @@ form button {
     width: 560px;
   }
   /*PALMARES*/
+  .palmares__main {
+    display: grid;
+    place-items: center;
+    padding: 0 1.5em;
+  }
+  .palmares__main .palmares__main__section {
+    padding: 2.5em;
+    background: linear-gradient(to bottom, rgb(42, 47, 88) 70%, rgb(50, 56, 107) 100%);
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+  .palmares__main .palmares__main__section .palmares__main--title {
+    position: relative;
+    display: inline-block;
+    z-index: 0;
+    font-size: 2em;
+  }
+  .palmares__main .palmares__main__section .palmares__main--title::after {
+    height: 5px;
+    margin-bottom: 5px;
+  }
+  .palmares__main .section__palmares-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5em;
+  }
+  .palmares__main .section__palmares-wrapper .palmares__main--p {
+    line-height: 1.8;
+    width: 75ch;
+  }
+  .palmares__main .section__palmares-wrapper .palmares__main--p span {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .palmares__main .section__palmares-wrapper .palmares__img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
   /*RIVALIDADES*/
+  .section--rivalidades {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .section--rivalidades .section--rivalidades__article--container {
+    background: linear-gradient(to bottom, rgb(42, 47, 88) 70%, rgb(50, 56, 107) 100%);
+    border-radius: 10px;
+    padding: 3em;
+    margin: 0 auto;
+  }
+  .section--rivalidades .section--rivalidades__article--container .section--rivalidades__article-title {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 1.8em;
+    margin: 1em 0;
+    z-index: 0;
+  }
+  .section--rivalidades .section--rivalidades__article--container .section--rivalidades__article-title::after {
+    height: 5px;
+    margin-bottom: 5px;
+  }
+  .section--rivalidades .section--rivalidades__article--container .rivalidades__img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .section--rivalidades .section--rivalidades__article--container .section--rivalidades__div {
+    display: flex;
+    flex-direction: column;
+  }
+  .section--rivalidades .section--rivalidades__article--container .section--rivalidades__div .section--rivalidades__p {
+    background-color: transparent;
+    max-width: 75ch;
+    margin: auto 0 auto auto;
+    line-height: 1.8;
+  }
+  .section--rivalidades .section--rivalidades__article--container .section--rivalidades__div .rivalidades_a--link {
+    width: initial;
+    align-self: center;
+    transition: all 0.2s ease;
+    border-radius: 40px;
+  }
+  .section--rivalidades .section--rivalidades__article--container .section--rivalidades__div .rivalidades_a--link:hover {
+    color: white;
+  }
+  .section--rivalidades .section--rivalidades__article--container .section--rivalidades__div .rivalidades_a--link:active {
+    transition: all 0.2s ease;
+    transform: scale(0.9);
+    text-shadow: 3px 2px 2px black;
+    box-shadow: 3px 2px 2px black;
+  }
   /*CONTACTO*/
+  .contacto__main--wrapper {
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    gap: 14em;
+    padding: 0 1.5em;
+  }
+  .contacto__main--wrapper .contacto__main--left {
+    background-image: url("/assets/djokovicContacto.webp");
+    background-position: center;
+    background-size: cover;
+    isolation: isolate;
+    position: relative;
+    padding: 0 2em;
+    height: 100vh;
+    margin: 0 0.7em !important;
+  }
+  .contacto__main--wrapper .contacto__main--left::after {
+    background-color: rgb(42, 47, 88);
+    content: "";
+    position: absolute;
+    z-index: -10;
+    inset: 0;
+    opacity: 0.8;
+  }
+  .contacto__main--wrapper .contacto__main--left h1 {
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px black;
+  }
+  .contacto__main--wrapper .contacto__main--right {
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contacto__main--wrapper .contacto__main--right p {
+    font-size: 1.5em;
+  }
+  .contacto__main--wrapper .contacto__main--right span {
+    position: relative;
+    font-weight: bold;
+  }
+  .contacto__main--wrapper .contacto__main--right span::after {
+    content: "";
+    background-color: #e91e63;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    z-index: -10;
+  }
+  .contacto__main--wrapper .contacto__main--right form {
+    display: grid;
+    place-items: start;
+  }
+  .contacto__main--wrapper .contacto__main--right form label {
+    cursor: pointer;
+  }
+  .contacto__main--wrapper .contacto__main--right form input, .contacto__main--wrapper .contacto__main--right form .contacto__main--feedback {
+    color: black;
+    padding: 1.2em;
+    border-radius: 0.5em;
+    border: none;
+    margin: 1em 0;
+    width: 75ch;
+  }
+  .contacto__main--wrapper .contacto__main--right form input:focus,
+  .contacto__main--wrapper .contacto__main--right form input:hover,
+  .contacto__main--wrapper .contacto__main--right form .contacto__main--feedback:focus,
+  .contacto__main--wrapper .contacto__main--right form .contacto__main--feedback:hover {
+    outline: 2px solid rgb(80, 153, 255);
+    background-color: rgb(231, 229, 229);
+  }
+  .contacto__main--wrapper .contacto__main--right form .contacto__main--feedback {
+    height: 8em;
+    resize: none;
+  }
+  .contacto__main--wrapper .contacto__main--right form button {
+    display: inline-block;
+    background-color: rgb(80, 153, 255);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 1em 3em;
+    margin-top: 1.125em;
+    border-radius: 0.5em;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .contacto__main--wrapper .contacto__main--right form button:active {
+    transition: all 0.1s ease;
+    transform: scale(0.9);
+    text-shadow: 3px 2px 2px black;
+    box-shadow: 3px 2px 2px black;
+  }
 }
 footer {
   display: flex;

@@ -6,10 +6,11 @@ $paletaColores:(
     //GENERAL
     bg-body: rgb(42,47,88),
     bg-header: rgb(50, 56, 107),
+    bg-containers: linear-gradient(to bottom, rgb(42, 47, 88) 70%, rgb(50, 56, 107) 100%),
+    bg-input__active: rgb(231, 229, 229),
     color__a--links: whitesmoke,
     color--texto: white,
     subrayadoAfter: #e91e63,
-    bg-containers: linear-gradient(to bottom, rgb(42, 47, 88) 70%, rgb(50, 56, 107) 100%),
     
     //INDEX
     bg-texto--index:  rgb(80, 153, 255),
