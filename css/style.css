@@ -484,7 +484,7 @@ form button {
     padding: 0 1.5em;
   }
   .contacto__main--wrapper .contacto__main--left {
-    background-image: url("/assets/djokovicContacto.jpg");
+    background-image: url("../assets/djokovicContacto.jpg");
     background-position: center;
     background-size: cover;
     isolation: isolate;
